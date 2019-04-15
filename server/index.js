@@ -16,11 +16,13 @@ massive(CONNECTION_STRING)
 
 app.use(express.json());
 
-// app.post('/api/products', products_controller.create);
-// app.get('/api/inventory', );
-// app.get('/api/products/:id', products_controller.getOne);
-// app.put('/api/products/:id', products_controller.update);
-// app.delete('/api/products/:id', products_controller.delete);
+app.get(".api/inventory", (req, res) => {
+    const db = req.app.get("db")
+
+    db.get().then()
+})
+
+
 
 app.listen(SERVER_PORT, () => {
     console.log(`Server listening on port ${SERVER_PORT}.`);
